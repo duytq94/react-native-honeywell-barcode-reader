@@ -2,7 +2,7 @@
 
 This package works with Honeywell devices that have an integrated barcode scanner, like the Honeywell EDA50K (tested).
 
-Actually, I custom from https://github.com/Volst/react-native-honeywell-scanner but fix can not remove event listener (even you close the reader). And if you don't remove, the event will fire twice, tripple... more and more times when you call `addListener` until you kill the app.
+Actually, I custom from https://github.com/Volst/react-native-honeywell-scanner but fix cannot remove event listener (even you close the reader). And if you don't remove, the event will fire twice, triple... more and more times when you call `addListener` until you kill the app.
 
 The bug at here is you can not remove event listener by call `DeviceEventEmitter.removeListener(eventName, handler)` since it doesn't have this method. Follow here: https://stackoverflow.com/questions/36886628/how-do-you-remove-a-listener-from-react-natives-eventemitter-instance
 
