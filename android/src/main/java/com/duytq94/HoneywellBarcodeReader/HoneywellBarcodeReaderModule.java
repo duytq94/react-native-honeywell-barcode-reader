@@ -117,6 +117,33 @@ public class HoneywellBarcodeReaderModule extends ReactContextBaseJavaModule imp
         promise.resolve(null);
     }
 
+    @ReactMethod
+    public void setReaderProprety(String propName, int value)  {
+        try{
+            reader.setProperty(propName , value);
+        }catch(Exception e){
+
+        }
+    }
+
+    @ReactMethod
+    public void setReaderProprety(String propName, boolean value)  {
+        try{
+            reader.setProperty(propName , value);
+        }catch(Exception e){
+
+        }
+    }
+
+    @ReactMethod
+    public void setReaderProprety(String propName, String value)  {
+        try{
+            reader.setProperty(propName , value);
+        }catch(Exception e){
+
+        }
+    }
+
     private boolean isCompatible() {
         // This... is not optimal. Need to find a better way to performantly check whether device has a Honeywell scanner 
         return Build.BRAND.toLowerCase().contains("honeywell");
